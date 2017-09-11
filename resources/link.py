@@ -29,7 +29,7 @@ class Links(Resource):
         # if we are inserting first URL, set the starting key
         row = LinksModel.find_by_url(data['url'])
         if row:
-            return {'message': 'An item with the URL {} already exists!'.format(data['url']), 'hash':row.hash}, 200
+            return {'message': 'An item with the URL {} already exists!'.format(data['url']), 'hash':row.hash, 'hits':row.hits}, 200
         link = LinksModel(data['url'],0,'')
         # generate random hash_id
         hash_id = random.randint(40313122,2047483647)
