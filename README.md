@@ -1,25 +1,8 @@
 # miniRL
-URL shortening service built with N-base encoding.
-
-## Running JS
-1. Install nvm and npm
-
-```
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh | bash
-$ cd frontend
-$ nvm install
-$ npm install
-```
+URL shortening service built with N-base encoding. This repo servers as the server side code. Built with Flask. Deployed to Heroku.
 
 
-2. Running
-
-```
-$ npm dev run
-```
-
-
-## Starting server
+## Starting server for development
 
 1. Install and activate virtual environment
 
