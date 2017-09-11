@@ -9,7 +9,13 @@ from resources.user import UserRegister
 from resources.link import Links, InterpretHash, LinksList
 from resources.store import Store, StoreList
 
+from flask_cors import CORS, cross_origin
+
+
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Access-Control-Allow-Origin'
+
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'karan'
